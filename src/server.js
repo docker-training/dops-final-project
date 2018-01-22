@@ -1,8 +1,14 @@
-// A note about the license of this photos: 
-// all photos are free for private and commercial use
-// https://www.pexels.com/photo-license/
+const express = require('express');
+const app = express();
+app.use(express.static('public'));
 
-var baseURL = "https://static.pexels.com/photos/";
+app.get('/hello', (req, res) => res.send('Hello World!'));
+
+app.get('/pets', function (req, res) {
+  res.send(pets);
+})
+
+app.listen(3000, () => console.log('Example app listening on port 3000!'));
 
 var pets = [
     "51964/humpback-whale-natural-spectacle-nature-mammal-51964.jpeg",
@@ -21,11 +27,3 @@ var pets = [
     "735640/pexels-photo-735640.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb",
     "236589/pexels-photo-236589.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb"
 ]
-
-var album = document.getElementById("album");
-pets.forEach(pet => {
-    var item = document.createElement("img");
-    item.className = "photo";
-    item.src = baseURL + pet;
-    album.appendChild(item);
-})

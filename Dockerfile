@@ -1,6 +1,7 @@
 FROM node:9.4-alpine
-RUN npm install -g http-server
-COPY . /app
+COPY ./src/package.json /app/
 WORKDIR /app
-EXPOSE 8080
-CMD ["http-server"]
+RUN npm install
+COPY ./src /app
+EXPOSE 3000
+CMD ["npm", "start"]

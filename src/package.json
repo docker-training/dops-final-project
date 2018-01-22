@@ -1,0 +1,8 @@
+{
+    "name": "dops_final_project",
+    "description": "DOPS Final Project",
+    "version": "1.0.0",
+    "dependencies": {
+        "express": "^4.16.2"
+    }
+}
