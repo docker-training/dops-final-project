@@ -1,0 +1,15 @@
+h1, h2 {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#album {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.photo {
+    margin: 5px;
+    width: 200px;
+    height: 200px;
+}
