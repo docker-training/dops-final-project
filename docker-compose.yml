@@ -4,4 +4,4 @@ services:
     build: .
     image: training/dops-final-project
     ports:
-    - 8080:8080
+    - 8080:3000
